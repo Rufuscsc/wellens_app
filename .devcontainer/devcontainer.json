@@ -1,0 +1,19 @@
+{
+  "name": "Wellens App (ERPNext)",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "frappe",
+  "workspaceFolder": "/home/frappe/frappe-bench",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-vscode.live-server",
+        "mtxr.sqltools",
+        "mtxr.sqltools-driver-mysql"
+      ]
+    }
+  },
+  "remoteUser": "frappe",
+  "forwardPorts": [8000, 9000, 3306],
+  "postCreateCommand": "bash .devcontainer/setup.sh"
+}
